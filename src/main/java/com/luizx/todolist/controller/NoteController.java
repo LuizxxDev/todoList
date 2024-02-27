@@ -19,14 +19,14 @@ public class NoteController {
     }
 
     @PostMapping
-    public ResponseEntity<Note> insertNewNote(@RequestBody Note note){
-        service.insertNewNote(note);
+    public ResponseEntity<Note> createNewNote(@RequestBody Note note){
+        service.createNewNote(note);
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @GetMapping
-    public ResponseEntity<List<Note>> findAllNotes(){
-        return ResponseEntity.status(HttpStatus.OK).body(service.findAllNotes());
+    public ResponseEntity<List<Note>> listAllNotes(){
+        return ResponseEntity.status(HttpStatus.OK).body(service.listAllNotes());
     }
 
     @GetMapping("/{id}")
