@@ -21,7 +21,7 @@ public class CategoryService {
         return repository.save(category);
     }
 
-    public List<Category> findAllCategories(){
+    public List<Category> listAllCategories(){
         return repository.findAll(Sort.by(Sort.Order.asc("name")));
     }
 
